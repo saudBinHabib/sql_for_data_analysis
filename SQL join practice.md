@@ -31,6 +31,7 @@ This file contains the detail practice of joins with questions.
 	ON accounts.sales_rep_id = sales_region.id
 	ORDER BY accounts.name ASC
 
+
 ~~~~~~~~~~~~~~~~
 
 3) Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. Your final table should have 3 columns: region name, account name, and unit price. A few accounts have 0 for total, so I divided by (total + 0.01) to assure not dividing by zero.
@@ -68,6 +69,7 @@ This file contains the detail practice of joins with questions.
 	WHERE r.name = 'Midwest'
 	ORDER BY a.name ASC
 
+
 ~~~~~~~~~~~~~~~~
 5) Provide a table that provides the region for each sales_rep along with their associated accounts. This time only for accounts where the sales rep has a first name starting with S and in the Midwest region. Your final table should include three columns: the region name, the sales rep name, and the account name. Sort the accounts alphabetically (A-Z) according to account name.
 
@@ -97,6 +99,7 @@ This file contains the detail practice of joins with questions.
 	JOIN orders o
 	ON a.id = o.account_id
 	WHERE o.standard_qty > 100
+
 
 ~~~~~~~~~~~~~~~~
 7) Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. However, you should only provide the results if the standard order quantity exceeds 100 and the poster order quantity exceeds 50. Your final table should have 3 columns: region name, account name, and unit price. Sort for the largest unit price first. In order to avoid a division by zero error, adding .01 to the denominator here is helpful (total_amt_usd/(total+0.01).
