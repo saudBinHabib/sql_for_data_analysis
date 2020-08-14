@@ -7,6 +7,7 @@ This file contains the detail practice of joins with questions.
 ~~~~~~~~~~~~~~~~
 
 ::
+
 	SELECT account.name, account.primary_poc, web.channel, web.occurred_at 
 	FROM web_events AS web
 	JOIN accounts AS account
@@ -18,7 +19,6 @@ This file contains the detail practice of joins with questions.
 
 ::
     
-
 	SELECT sales_region.region_name, sales_region.sales_representive, accounts.name AS account_name
 	FROM 
 	(
@@ -33,10 +33,10 @@ This file contains the detail practice of joins with questions.
 
 
 ~~~~~~~~~~~~~~~~
-
 3) Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. Your final table should have 3 columns: region name, account name, and unit price. A few accounts have 0 for total, so I divided by (total + 0.01) to assure not dividing by zero.
 
 ::
+
 	SELECT sales_region.name as region_name, account_orders.name as account_name, account_orders.unit_price
 	FROM 
 	(
