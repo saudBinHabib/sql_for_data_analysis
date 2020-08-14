@@ -87,6 +87,7 @@ This file contains the detail practice of joins with questions.
 6) Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. However, you should only provide the results if the standard order quantity exceeds 100. Your final table should have 3 columns: region name, account name, and unit price. In order to avoid a division by zero error, adding .01 to the denominator here is helpful total_amt_usd/(total+0.01).
 
 ::
+
 	SELECT r.name region, a.name account_name, (o.total_amt_usd / (o.total + 0.01)) unit_price
 	FROM region r
 	JOIN sales_reps s
