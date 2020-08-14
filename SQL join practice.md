@@ -129,15 +129,17 @@ This file contains the detail practice of joins with questions.
 	WHERE a.id = '1001'
 
 
+~~~~~~~~~~~~~~~~
 9) Find all the orders that occurred in 2015. Your final table should have 4 columns: occurred_at, account name, order total, and order total_amt_usd.
 
+::
 
-SELECT o.occurred_at, a.name account_name, o.total, o.total_amt_usd
-FROM orders o
-JOIN accounts a
-ON a.id = o.account_id
-WHERE o.occurred_at BETWEEN ' 2015-01-01' AND ' 2016-01-01'
-ORDER BY o.total_amt_usd DESC
+	SELECT o.occurred_at, a.name account_name, o.total, o.total_amt_usd
+	FROM orders o
+	JOIN accounts a
+	ON a.id = o.account_id
+	WHERE o.occurred_at BETWEEN ' 2015-01-01' AND ' 2016-01-01'
+	ORDER BY o.total_amt_usd DESC
 
 
 
